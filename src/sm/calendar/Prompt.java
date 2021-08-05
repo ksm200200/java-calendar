@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Prompt {
 
-	private final static String PROMPT = "cal> ";
 
 	public void runPrompt() {
 
@@ -14,9 +13,13 @@ public class Prompt {
 
 		// 숫자를 입력받아 해당하는 숫자의 달력을 출력하는 프로그램
 		int month = 0;
+		int year = 0;
 		while (true) {
-			System.out.println("달을 입력하세요");
-			System.out.print(PROMPT);
+			System.out.println("년도를 입력하세요.");
+			System.out.print("YEAR> ");
+			year = scan.nextInt();
+			System.out.println("달을 입력하세요.");
+			System.out.print("MONTH> ");
 			month = scan.nextInt();
 			
 			if (month == -1) {
@@ -24,7 +27,7 @@ public class Prompt {
 			} else if (month >= 13) {
 				continue;
 			}
-			cal.printCalendar(2021, month);
+			cal.printCalendar(year, month);
 		}
 
 		System.out.println("----끝!----");
