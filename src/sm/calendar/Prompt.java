@@ -23,10 +23,10 @@ public class Prompt {
 		
 		Calendar cal = new Calendar();
 
-		// 숫자를 입력받아 해당하는 숫자의 달력을 출력하는 프로그램
+		
 		int month = 1;
 		int year = 1997;
-		int weekday = 0;
+		
 		while (true) {
 			System.out.println("년도를 입력하세요.(exit : -1)");
 			System.out.print("YEAR> ");
@@ -37,16 +37,13 @@ public class Prompt {
 			System.out.println("달을 입력하세요.");
 			System.out.print("MONTH> ");
 			month = scan.nextInt();
+			
 			if (month > 12 || month < 1) {
 				System.out.println("잘못된 입력입니다.");
 				continue;
 			}
-			System.out.println("첫번째 요일을 입력하세요.(SU, MO, TU, WE, TH, FR, SA)");
-			System.out.print("WEEKDAY> ");
-			String str_WEEKDAY = scan.next();
-			weekday = getDay(str_WEEKDAY);
 			
-			cal.printCalendar(year, month, weekday);
+			cal.printCalendar(year, month);
 		}
 
 		System.out.println("----끝!----");
