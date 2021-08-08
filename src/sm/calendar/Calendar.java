@@ -12,7 +12,6 @@ public class Calendar {
 				return false;
 				}	
 		}
-	
 	// 달의 최대 날짜를 돌려주는 함수
 	public int getMaxDaysOfMonth(int year, int month) {
 		if(isLeapYear(year)) {

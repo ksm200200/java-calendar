@@ -46,9 +46,6 @@ public class Prompt {
 			String str_WEEKDAY = scan.next();
 			weekday = getDay(str_WEEKDAY);
 			
-			
-			
-			
 			cal.printCalendar(year, month, weekday);
 		}
 
